@@ -61,6 +61,35 @@
         padding: 12px 0;
         text-decoration: none;
       }
+
+      .list-tags {
+          display: left;
+          margin-top: 0px;
+          font-size: 0.8rem;
+          line-height: normal;
+          @include dimmed;
+
+          a {
+              padding: 0px 0;
+              display: inline;
+              
+          }
+
+          a:hover {
+              border-bottom: 1px solid white;
+          }
+
+          svg {
+              margin-right: .8em;
+          }
+
+          .feather {
+              display: inline-block;
+              vertical-align: -.125em;
+              width: 1em;
+              height: 1em;
+          }
+      }
     }
 
     &-day {

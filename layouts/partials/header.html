@@ -1,6 +1,7 @@
 <header class="header">
     <span class="header__inner">
-        {{ partial "logo.html" . }}
+        <a style="text-decoration:none" href="{{.Site.BaseURL}}">{{ .Site.Title }} </a>
+
 
         <span class="header__right">
             {{ if len .Site.Menus }}

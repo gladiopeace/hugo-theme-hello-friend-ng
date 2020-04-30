@@ -17,12 +17,20 @@
                                 <span class="post-title">{{.Title}}</span>
                                 <span class="post-day">
                                     {{ if .Site.Params.dateformShort }}
-                                        {{ .Date.Format .Site.Params.dateformShort }}
+                                    {{ .Date.Format .Site.Params.dateformShort }}
                                     {{ else }}
-                                        {{ .Date.Format "Jan 2"}}
+                                    {{ .Date.Format "Jan 2"}}
                                     {{ end }}
                                 </span>
                             </a>
+                            <!-- Display tags  -->
+                            {{- with .Params.tags }}
+                            <div class="list-tags" >
+                                    {{- range sort . -}}
+                                <span><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">#{{.}}</a></span>
+                                    {{- end }}
+                                {{- end }}
+                            </div>
                         </li>
                     {{- end }}
                 </ul>
