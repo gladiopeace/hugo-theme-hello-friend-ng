@@ -8,26 +8,18 @@
 
         {{- range .Data.Pages.GroupByDate "2006" }}
             <div class="posts-group">
-                <div class="post-year">{{ .Key }}</div>
-
                 <ul class="posts-list">
                     {{- range .Pages }}
-                        <li class="post-item">
+                    <li class="post-item">
+
                             <a href="{{.Permalink}}">
                                 <span class="post-title">{{.Title}}</span>
-                                <span class="post-day">
-                                    {{ if .Site.Params.dateformShort }}
-                                    {{ .Date.Format .Site.Params.dateformShort }}
-                                    {{ else }}
-                                    {{ .Date.Format "Jan 2"}}
-                                    {{ end }}
-                                </span>
                             </a>
                             <!-- Display tags  -->
                             {{- with .Params.tags }}
                             <div class="list-tags" >
                                     {{- range sort . -}}
-                                <span><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">#{{.}}</a></span>
+                                <span><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">  #{{.}}</a></span>
                                     {{- end }}
                                 {{- end }}
                             </div>

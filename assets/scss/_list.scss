@@ -52,18 +52,26 @@
     }
 
     &-item {
-      border-bottom: 1px grey dashed;
+        // border-bottom: 1px grey dashed;
+        clear:both;
+        padding-bottom: 1.5em;
 
       a {
-        display: flex;
+          //display: flex;
+          clear: left;
         justify-content: space-between;
         align-items: baseline;
         padding: 12px 0;
         text-decoration: none;
+
+      }
+
+      a:hover {
+          text-decoration:underline;
       }
 
       .list-tags {
-          display: left;
+          float: right;
           margin-top: 0px;
           font-size: 0.8rem;
           line-height: normal;
@@ -72,10 +80,9 @@
           a {
               padding: 0px 0;
               display: inline;
-              
           }
 
-          a:hover {
+          a::hover {
               border-bottom: 1px solid white;
           }
 
